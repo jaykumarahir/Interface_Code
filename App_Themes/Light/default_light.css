@@ -1,0 +1,230 @@
+﻿/*
+    Default CSS Template
+    Note: Some extra files may be required!
+*/
+
+/* Next code taken from Book Course >> */
+/* reset rules */
+
+
+/* Next code taken from Book Course >> */
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+
+
+.hr-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #a34e24;
+    border-top: 1px solid #a34e24;
+
+}
+
+.top-margin-div {
+    margin-top: 20px;
+}
+
+
+.border-bottom {
+    border-bottom: 1px solid black;
+}
+
+.footer-color-link, .footer-color-link:hover {
+    color: #a34e24;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.page-header-bottom {
+    border-bottom: 1px dashed #ea7d24 !important;
+}
+
+.footer-color-link-media, .footer-color-link-media:hover {
+    color: #ea7d24;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-back1 {
+    border-top: 1px solid #a34e24;
+    background-color: #f9df8d;
+}
+
+.yellow-color {
+    color: #f9df8d;
+}
+
+.footer-back2 {
+    background-color: #796e24;
+    color: #f9df8d;
+}
+.main-title, .main-title:hover {
+    color: #f9df8d !important;
+    text-shadow: 2px 2px 2px #a34e24;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo-title, .logo-title:hover {
+    color: #f9df8d !important;
+    text-shadow: 2px 2px 2px #a34e24;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.banner-text {
+    color: #f9df8d;
+    text-shadow: 2px 2px 2px #a34e24;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-top: 0px;
+    padding-top: 80px;
+}
+
+.sub-title {
+    color: #ea7d24;
+    text-shadow: 2px 2px 2px #f9df8d;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.main-div-top-margin {
+    margin-top: 50px;
+}
+
+.gallery-border {
+    border: 3px solid #796e24;
+}
+
+
+.gray-back {
+    background-color: #F2F2F3;
+}
+
+#banner {
+    background: url("../../../img/banner.jpg") no-repeat center center fixed !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    min-height: 200px;
+    height: 200px;
+    position: relative;
+}
+
+#banner span {
+    font-size: 64px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.banner-margin-bottom {
+    min-height: 50px;
+}
+
+
+.text-middle-div {
+    vertical-align: middle;    
+    line-height: 180px;
+}
+
+.lg-menu-title {
+    position: absolute;
+    top: 80;
+}
+
+
+#sub-banner-1 {
+     background: url("../../../img/subbanner1.jpg") no-repeat center center !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    min-height: 200px;
+    height: 200px;
+    position: relative;
+}
+
+#sub-banner-2 {
+    background: url("../../../img/subbanner2.jpg") no-repeat center center !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    min-height: 200px;
+    height: 200px;
+    position: relative;
+}
+
+
+.no-margin-bottom {
+    margin-bottom: 0px !important;
+}
+
+.lg-menu-margin-bottom {
+    margin-bottom: 30px !important;
+}
+
+/* SUPER LARGE VERSION >> */
+
+/* FOR TITLE MARGIN */
+@media only screen and (min-width: 972px) {
+    .top-space {
+        line-height: 80px;
+    }
+
+    .temp-margin-top {
+    margin-top: 30px;
+    }
+}
+
+/* TABLET AND DESKTOP VERSION >> */
+@media only screen and (min-width: 992px) {
+
+    .input-margin-bottom {
+        margin-bottom: 12px;
+    }
+}
+
+/* MAIN TITLE >> */
+@media only screen and (min-width: 761px) and (max-width: 991px) {
+	.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+
+/* MOBILE VERSION >> */
+@media only screen and (max-width: 760px) {
+	circle {
+         width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    }
+	
+}

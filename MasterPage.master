@@ -1,0 +1,168 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <%-- Bootstrap Links --%>
+    <link href="~/bootstrap/css/bootstrap-theme.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="~/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="~/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" runat="server"/>
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" runat="server"/>
+    
+
+    <%-- This is Space for Header --%>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+
+    <!-- TOP-BAR NAVIGATION :: START -->
+<nav class="navbar navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand logo-title" href="Default.aspx">MyRecipe</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="About_Us.aspx">
+            <span class="glyphicon glyphicon-question-sign"></span> About Us</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Sign_Up.aspx">
+            <span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="My_Basket.aspx">
+            <span class="glyphicon glyphicon-shopping-cart"></span>My Basket</a></li>
+        <li><a href="All_Recipes.aspx">
+            <span class="glyphicon glyphicon-book"></span> View Recipes</a></li>
+        <li><a href="Search_Recipe.aspx">
+            <span class="glyphicon glyphicon-search"></span> Search Recipe</a></li>
+        <li><a href="Setup_Theme.aspx">
+            <span class="glyphicon glyphicon-cog"></span> Setup Theme</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <!-- TOP-BAR NAVIGATION :: END -->
+    
+    <!-- SIDE-BAR NAVIGATION :: START-->
+    
+    <!-- SIDE-BAR NAVIGATION :: END --> 
+
+    <!-- BANNER :: START -->
+    <div class="main-div-top-margin">
+        <section role="banner-with-pic">
+            <div id="banner" class="col-md-12 text-right" style="vertical-align: bottom">
+                <h1 class="logo-title"><span>MyRecipe</span></h1>
+            </div><!-- ./col-md-12 -->
+        </section>
+    </div><!-- ./container-->
+    <!-- BANNER :: END -->
+    <!-- DIVISOR BETWEEN BANNER AND CONTENT :: IMPORTANT -->
+    <!--<div class="banner-margin-bottom"></div>-->
+
+    <form id="form1" runat="server">
+    <div>
+        <%-- This is Space for Content--%>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                
+        </asp:ContentPlaceHolder>
+
+    </div>
+    </form>
+
+    <!-- FOOTER :: START -->
+    <footer class="top-margin-div footer-back1">
+        <section role="footer-containter" class="container">
+            <div class="row top-margin-div">
+                <div class="col-xs-6 col-sm-4 text-center">
+                    <a href="Default.aspx" class="footer-color-link">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <br />Home</a><br />
+                    <a href="About_Us.aspx" class="footer-color-link">
+                        <span class="glyphicon glyphicon-question-sign"></span>
+                        <br />About Us</a><br />
+                    
+                </div><!-- ./col-ms-4-->
+
+                <div class="col-xs-6 col-sm-4 text-center">
+                    <a href="Sign_Up.aspx" class="footer-color-link">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <br />Log In</a><br />
+                    <a href="My_Basket.aspx" class="footer-color-link">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        <br />My Basket</a><br />
+                    <a href="Setup_Theme.aspx" class="footer-color-link">
+                        <span class="glyphicon glyphicon-cog"></span>
+                        <br />Setup Theme</a>
+                </div><!-- ./col-ms-4 -->
+
+                <div class="col-xs-6 col-sm-4 text-center">
+                    <a href="All_Recipes.aspx" class="footer-color-link">
+                        <span class="glyphicon glyphicon-book"></span>
+                        <br />View Recipes</a><br />
+                    <a href="Search_Recipe.aspx" class="footer-color-link">
+                        <span class="glyphicon glyphicon-search"></span>
+                        <br />Search Recipe</a>
+                </div><!-- col-sm-4 -->
+            </div><!-- ./row -->
+
+            <hr class="hr-footer"/>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 text-center">
+                    <h4>
+                     <a href="https://www.facebook.com" class="footer-color-link-media"><span class="glyphicon glyphicon-globe"></span><br />
+                    <small class="footer-color-link-media">Facebook</small></a></h4>
+                </div><!-- ./col-sm-3-->
+              
+                <div class="col-xs-6 col-sm-3 text-center">
+                    <h4>
+                     <a href="https://wwww.instagram.com" class="footer-color-link-media"><span class="glyphicon glyphicon-globe"></span><br />
+                    <small class="footer-color-link-media">Instagram</small></a></h4>
+                </div><!-- ./col-sm-3-->
+                    
+                <div class="col-xs-6 col-sm-3 text-center">
+                    <h4>
+                    <a href="https://www.twitter.com" class="footer-color-link-media"><span class="glyphicon glyphicon-globe"></span><br />
+                    <small class="footer-color-link-media">Twitter</small></a></h4>
+                </div><!-- ./col-sm-3-->
+
+                <div class="col-xs-6 col-sm-3 text-center">
+                    <h4>
+                    <a href="https://www.snapchat.com" class="footer-color-link-media"><span class="glyphicon glyphicon-globe"></span><br />
+                    <small class="footer-color-link-media">Snapchat</small></a></h4>
+                </div><!-- ./col-sm-3-->
+            </div><!-- ./row-->
+        </section>
+    <div class="footer-back2 top-margin-div">
+        <div class="container">
+        <div class="col-md-12 text-center">
+				<h5><small class="yellow-color"><strong>&copy;Centennial College - COM214 Group 10. &reg;Registered All rights reserved.</strong></small></h5>
+			</div><!-- ./text-center-->
+           </div><!-- ./container-->
+        </div><!-- ./footer-back2 -->
+    </footer>
+    <!-- FOOTER :: END -->
+
+</body>
+</html>
