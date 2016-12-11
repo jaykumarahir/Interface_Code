@@ -17,11 +17,13 @@
             </div><!-- ./page-header -->
 
             <div class="col-md-12">
+                
+
             <div class="col-md-5">
                 <div class="page-header text-center">
                     <h3>Log In</h3>
                  </div><!-- ./page-header -->
-
+                <asp:Label ID="lblError" runat="server" Text="" ForeColor="#CC0000"></asp:Label>
                 <div class="well">
                 <!-- CONTROL #1 -->
                 <div class="row input-margin-bottom">
@@ -39,16 +41,18 @@
 
                 <!-- CONTROL #2 -->
                 <uc1:sbAccountPassword runat="server" ID="sbAccountPassword" LabelText="Password" PlaceHolderText="Password" ValidationGroupText="loginInfo"/>
+                <asp:Label ID="Label1" runat="server" Text="Note: The password for all accounts is 'password'."></asp:Label>
                 <div class="row">
-                    <asp:Button ID="btnLogIn" runat="server" Text="Log In" Width="100%" CssClass="btn btn-md btn-info" ValidationGroup="loginInfo"/>
+                    <asp:Button ID="btnLogIn" runat="server" Text="Log In" Width="100%" CssClass="btn btn-md btn-info" ValidationGroup="loginInfo" OnClick="btnLogIn_Click"/>
                 </div><!-- ./row -->
                 </div><!-- ./well -->
             </div><!-- ./col-md-5 -->
+
             <div class="col-md-7">
                 <div class="page-header text-center">
                     <h3>Create Account</h3>
                  </div><!-- ./page-header -->
-
+                <asp:Label ID="lblError1" runat="server" Text="" ForeColor="#CC0000"></asp:Label>
                 <!-- CONTROL #1 -->
                 <uc1:sbAccount runat="server" ID="sbAccount" LabelText="First Name" PlaceHolderText="First Name" ValidatorMessage="First Name is required." ValidationGroupText="signUpInfo"/>
 
@@ -56,7 +60,21 @@
                 <uc1:sbAccount runat="server" ID="sbAccount1" LabelText="Last Name" PlaceHolderText="Last Name" ValidatorMessage="Last Name is required." ValidationGroupText="signUpInfo"/>
 
                 <!-- CONTROL #3 --> 
-                <uc1:sbAccount runat="server" ID="sbAccount2" LabelText="Phone Number" PlaceHolderText="999-999-9999" ValidatorMessage="Phone Number is required" ValidationGroupText="signUpInfo"/>
+                <div class="row input-margin-bottom">
+                <div class="form-group">
+
+                    <asp:Label ID="lblPhone" CssClass="col-md-4 control-label" runat="server" Text="Phone"></asp:Label>
+
+                    <div class="col-md-8">
+                    <asp:TextBox ID="txtPhone" CssClass="form-control" runat="server" Width="100%" placeholder="9999999999"></asp:TextBox>
+                                <asp:RegularExpressionValidator ID="valPhone" runat="server" ErrorMessage="Invalid Phone Number. Only Numbers"
+                 Display="Dynamic" ControlToValidate="txtPhone" ValidationExpression="^\d{10}$" ForeColor="#CC0000" ValidationGroup="signUpInfo"></asp:RegularExpressionValidator>
+
+                    </div><!-- ./col-md-8 -->
+
+                </div><!-- ./form-group -->
+                </div><!-- ./input-margin-bottom -->
+             
                 
                 <!-- CONTROL #4 -->
                 <uc1:sbAccountEmail runat="server" ID="sbAccountEmail" LabelText="Email" PlaceHolderText="example@mail.com" ValidatorMessage="Email is required" ValidationGroupText="signUpInfo"/>
@@ -65,7 +83,7 @@
                 <uc1:sbAccountPassword runat="server" ID="sbAccountPassword1" LabelText="Password" PlaceHolderText="Password" ValidationGroupText="signUpInfo"/>
 
                 <div class="row">
-                    <asp:Button ID="btnSaveAccount" runat="server" Text="Create Account" Width="100%" CssClass="btn btn-md btn-primary" ValidationGroup="signUpInfo"/>
+                    <asp:Button ID="btnSaveAccount" runat="server" Text="Create Account" Width="100%" CssClass="btn btn-md btn-primary" ValidationGroup="signUpInfo" OnClick="btnSaveAccount_Click"/>
                 </div><!-- ./row -->
 
             </div><!-- ./col-md-7 -->

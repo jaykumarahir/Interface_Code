@@ -11,8 +11,11 @@
             </div><!-- ./page-header -->
 
             <div class="col-lg-12">
+                <div class="text-center">
+                    <asp:Label ID="lblLoginMessage" runat="server" Text="" CssClass="control-label text-center" ForeColor="#cc0000"></asp:Label>
+                </div><!-- ./text-center -->
                 <div class="col-sm-3">
-                    <asp:DropDownList ID="ddlSubmittedBy" runat="server" Width="100%" CssClass="form-control"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlPriceRange" runat="server" Width="100%" CssClass="form-control"></asp:DropDownList>
                 </div><!-- ./col-sm-3-->
 
                 <div class="col-sm-3">
@@ -31,30 +34,29 @@
             </div><!-- ./col-md-12 -->
 
             <div class="col-md-12">
-                <asp:Label ID="lblResult" runat="server" Text="" CssClass="control-label text-center" ForeColor="#cc0000"></asp:Label>
-                <asp:Repeater ID="rptRecipes" runat="server">
+                <asp:Label ID="lblError" runat="server" Text="" CssClass="control-label text-center" ForeColor="#cc0000"></asp:Label>
+
+                <asp:Repeater ID="rptRecipes" runat="server" OnItemCommand="rptRecipes_ItemCommand">
             <HeaderTemplate>
                 <%-- This only happens once! --%>
-                <table class="table table-condensed">
+                <table class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
                         <th class="text-center main-title">Name</th>
-                        <th class="text-center main-title">Submitted By</th>
                         <th class="text-center main-title">Category</th>
                         <th class="text-center main-title">Cooking Time</th>
-                        <th class="text-center main-title">Number Servings</th>
                         <th class="text-center main-title">Description</th>
+                        <th class="text-center main-title">Price</th>
                         </tr>
                     </thead>
             </HeaderTemplate>
             <ItemTemplate>
                 <tr>
                     <td class="text-center"><%#Eval("name") %></td>
-                    <td class="text-center"><%#Eval("submitted_by")%></td>
                     <td class="text-center"><%#Eval("category")%></td>
                     <td class="text-center"><%#Eval("cook_time") %></td>
-                    <td class="text-center"><%#Eval("num_serving")%></td>
                     <td class="text-center"><%#Eval("descr")%></td>
+                    <td class="text-center"><asp:LinkButton ID="btnBuy" runat="server" CommandArgument=<%#Eval("reci_id") %> CommandName="BuyRecipe" CssClass="btn btn-sm btn-info">Buy $<%#Eval("price") %></asp:LinkButton></td>
                 </tr>
 
             </ItemTemplate>

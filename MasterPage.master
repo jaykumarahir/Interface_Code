@@ -50,7 +50,7 @@
         <li><a href="Sign_Up.aspx">
             <span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href="My_Basket.aspx">
-            <span class="glyphicon glyphicon-shopping-cart"></span>My Basket</a></li>
+            <span class="glyphicon glyphicon-shopping-cart"></span> My Basket</a></li>
         <li><a href="All_Recipes.aspx">
             <span class="glyphicon glyphicon-book"></span> View Recipes</a></li>
         <li><a href="Search_Recipe.aspx">
